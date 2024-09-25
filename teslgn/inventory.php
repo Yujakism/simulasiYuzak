@@ -34,17 +34,17 @@
             <?php 
 include "koneksi.php";
 
-// Ambil kata kunci pencarian
+
 $search = isset($_GET['search']) ? mysqli_real_escape_string($kon, $_GET['search']) : '';
 
-// Modifikasi query dengan join berdasarkan vendor.id, tapi menampilkan nama_barang dari vendor
+
 $sql = "SELECT inventory.id AS inventory_id, inventory.nama_barang, inventory.jenis_barang, inventory.kuantitas_stok, inventory.lokasi_gudang, inventory.serial_number, inventory.harga,
         storage.id AS storage_id, storage.nama_gudang, storage.lokasi,
         vendor.id AS vendor_id, vendor.nama AS vendor_nama, vendor.kontak, vendor.nama_barang AS vendor_barang, vendor.nomor_invoice
         FROM inventory 
-        INNER JOIN vendor ON inventory.nama_barang = vendor.id -- Tetap hubungkan dengan vendor.id
+        INNER JOIN vendor ON inventory.nama_barang = vendor.id 
         INNER JOIN storage ON inventory.lokasi_gudang = storage.id
-        WHERE vendor.nama_barang LIKE '%$search%' -- Gunakan vendor.nama_barang untuk pencarian
+        WHERE vendor.nama_barang LIKE '%$search%' 
         ORDER BY inventory.id";
 
 $hsl = mysqli_query($kon, $sql);
