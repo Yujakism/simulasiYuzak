@@ -1,0 +1,51 @@
+.sidebar{
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    background-color: aliceblue;
+    color: black;
+    flex-direction: column;
+    display: flex;
+    padding-top: 20px;
+    z-index: 1;
+    top: 0;
+}
+.sidebar a{
+    padding-top: 30px;
+    font-size: large;
+    color: black;
+    text-decoration: none;
+}
+.content{
+    margin-left: 220px;
+    position: relative;
+}
+table{
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+tr th{
+    background-color: midnightblue;
+    color: white;
+}
+.header{
+    margin-left: 220px;
+    border-bottom:  5px solid black;
+}
+button{
+    background-color: aliceblue;
+    border-radius: 4px;
+    height: 25px;
+
+}
+button:hover{
+    background-color: rgb(219, 219, 219);
+}
+.sidebar a:hover{
+    background-color: rgb(225, 226, 228);
+}
+.alert{
+    background-color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
