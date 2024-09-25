@@ -93,7 +93,7 @@ if($hsl){
                     }
                 }
                 ?>
-                <!-- Data lainnya -->
+               
             </tbody>
             <a href="CRUD/tambah_inven.php">
                <button>Tambah</button>
